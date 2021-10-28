@@ -7,7 +7,8 @@ if __name__ == '__main__':
     pd.set_option('display.max_columns', df.shape[1] + 1)
 
     # 1. Print the number of rows and columns in the DataFrame
-
+    print(df.shape)
     # 2. Print the first _n_ rows of data (e.g. 5)
-
+    print(df.head(5))
     # 3. Print the column labels and data types. Note any columns that you don't think are needed.
+    print(df.info(verbose=True))

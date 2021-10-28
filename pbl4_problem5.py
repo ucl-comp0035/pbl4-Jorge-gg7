@@ -16,6 +16,8 @@ if __name__ == '__main__':
     df.fillna({'Type': 'Winter'}, inplace=True)
 
     # Find the unique values for the Type column
-
+    print(df['Type'].unique())
     # Remove the extra spaces from 'Summer   '. You can't use inplace=True as this is a Series action so you need to
     # replace the df["Type"] series with the result of the str.strip() function
+    df['Type'] = df['Type'].str.strip()
+    print(df['Type'].unique())
