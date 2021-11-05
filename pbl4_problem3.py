@@ -8,7 +8,8 @@ if __name__ == '__main__':
     print(df.info())
 
     # 1. Drop the list of named columns `['Events', 'Sports', 'Countries']
-    df.drop(['Events', 'Sports', 'Countries'], axis=1)
-    print(df.info())
+    df.drop(['Events', 'Sports', 'Countries'], axis=1, inplace=True)
+
     # 2. Print the column labels and data types again, or check the shape which should be lower than the original
     # column count
+    print(df.info())
